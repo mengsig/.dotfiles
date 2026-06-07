@@ -151,3 +151,42 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+setopt NO_CHECK_JOBS
+alias screenshot='grim -g "$(slurp)" - | tee ~/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png | wl-copy'
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/github-mengsig
+
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+
+# ------------------------------------------------------------
+# Claude Code launcher using local Qwen backend via vLLM
+# ------------------------------------------------------------
+claude-qwen() {
+  ANTHROPIC_BASE_URL=http://127.0.0.1:8012 \
+  ANTHROPIC_API_KEY=dummy \
+  ANTHROPIC_AUTH_TOKEN=dummy \
+  ANTHROPIC_DEFAULT_OPUS_MODEL=claude-sonnet \
+  ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet \
+  ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet \
+  claude "$@"
+}
+
+# opencode
+export PATH=/home/mengsig/.opencode/bin:$PATH
+
+# --- test_boyz global /qa (added by install.sh) ---
+export TEST_BOYZ_HOME="/home/mengsig/Projects/test_boyz"  # added by test_boyz install.sh
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
